@@ -28,6 +28,8 @@ This project showcases a simple web page layout with a responsive sidebar using 
 ## Usage
 1. Click on the sidebar menu items to navigate through different sections.
 2. Customize the sidebar links, icons, and content according to your project requirements.
+3. Run command below if you are doing some changes or development:
+`npx tailwindcss -i ./src/input.css -o ./src/output.css --watch`
 
 ## Contributing
 Contributions are welcome! If you find any issues or want to enhance the project, feel free to submit a pull request.
