@@ -2,6 +2,8 @@
 
 Welcome to the Tailwind CSS Sidebar Example! This project demonstrates a responsive sidebar navigation layout using HTML, CSS, and Tailwind CSS.
 
+![Sample](screenshots/sample.png)
+
 ## Table of Contents
 - Introduction
 - Features
