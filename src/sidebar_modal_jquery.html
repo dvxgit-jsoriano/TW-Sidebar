@@ -8,16 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Alpine JS CDN-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.8/cdn.js"
-        integrity="sha512-hN6ogT3v4Qd7huxKH/Pg0ZomVLJ1cxvjeZyLfuuq8CgYs+VwrFsbyTE9gHKQEw7gQQNeAZCGumF2XHPdx7BL7A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body class="bg-gray-50">
 
-    <div class="flex h-full" x-data="{ open: true }">
+    <div class="flex">
 
         <!-- Left column-->
         <div id="nav-sidebar" class="flex-none w-56 bg-gray-200 sm:flex-shrink-0">
@@ -59,7 +54,7 @@
                 <!-- Sidebar toggle button -->
                 <div class="left-nav">
                     <header class="text-gray-600 body-font">
-                        <button class="px-2 py-1 border rounded hover:bg-gray-100" type="button" @click="open = !open">
+                        <button class="px-2 py-1 border rounded hover:bg-gray-100" type="button">
                             <i class="fa-solid fa-bars"></i></button>
                     </header>
                 </div>
@@ -75,12 +70,31 @@
             <!-- Contents view-->
             <div class="p-4 mx-auto">
                 <div class="p-2 bg-gray-100 border rounded-md">
-                    <h1>This page consist of tailwindcss sidebar design with the help of <a href="https://alpinejs.dev/"
-                            class="font-bold text-blue-500">Alpine JS</a>. The sidebar toggles whenever you click the <i
+                    <h1>This page consist of only tailwindcss sidebar design. Nothing happens even if you click the <i
                             class="fa-solid fa-bars"></i></button> button</h1>
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Sidebar modal in mobile view -->
+    <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+
+        <!-- Transparent backdrop -->
+        <div class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75"></div>
+
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+            <div class="flex items-start justify-center min-h-full p-4 text-center sm:items-center sm:p-0">
+
+                <div
+                    class="relative overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:w-full sm:max-w-lg">
+                    <div class="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4">
+                        <div class="w-64 h-80"></div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 
