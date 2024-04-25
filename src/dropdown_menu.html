@@ -17,7 +17,7 @@
 
 <body class="bg-gray-50">
 
-    <div class="flex h-full">
+    <div class="flex">
 
         <!-- Left column-->
         <div id="nav-sidebar" class="flex-none w-56 bg-gray-200 sm:flex-shrink-0">
@@ -61,16 +61,44 @@
         </div>
 
         <!-- Right column -->
-        <div class="flex-1 h-screen bg-gray-300">
+        <div class="flex-1 bg-gray-300">
 
             <!-- Header navigation -->
             <div class="flex justify-between p-4 bg-gray-200">
                 <!-- Sidebar toggle button -->
-                <div class="left-nav">
+                <div class="flex gap-4 left-nav">
                     <header class="text-gray-600 body-font">
-                        <button class="px-2 py-1 border rounded hover:bg-gray-100" type="button"
-                            onclick="toggleSidebar();"><i class="fa-solid fa-bars"></i></button>
+                        <button class="px-2 py-1 border rounded hover:bg-gray-100" type="button">
+                            <i class="fa-solid fa-bars"></i></button>
                     </header>
+
+                    <div id="dropdown-menu" class="relative inline-block text-left">
+                        <div>
+                            <button id="dropdown-button" type="button" onclick="toggleDropdown();"
+                                class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+                                Options
+                                <i class="fa-solid fa-caret-down"></i>
+                            </button>
+                        </div>
+
+                        <div id="dropdown-list"
+                            class="absolute right-0 z-10 hidden w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                            aria-orientation="vertical">
+                            <div class="py-1" role="none">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                    id="menu-item-0">Account settings</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                    id="menu-item-1">Support</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                    id="menu-item-2">License</a>
+                                <form method="POST" action="#" role="none">
+                                    <button type="submit" class="block w-full px-4 py-2 text-sm text-left text-gray-700"
+                                        role="menuitem" id="menu-item-3">Sign out</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <!-- Profile button -->
@@ -81,13 +109,11 @@
                 </div>
             </div>
 
+            <!-- Contents view-->
             <div class="p-4 mx-auto">
                 <div class="p-2 bg-gray-100 border rounded-md">
-                    <h1>This page consist of tailwindcss sidebar design with the help of <a href="https://jquery.com/"
-                            class="font-bold text-blue-500">JQuery</a>. The
-                        sidebar
-                        toggles
-                        whenever you click the <i class="fa-solid fa-bars"></i></button> button</h1>
+                    <h1>This page consist of only tailwindcss sidebar design. Nothing happens even if you click the <i
+                            class="fa-solid fa-bars"></i></button> button</h1>
                 </div>
             </div>
 
@@ -95,9 +121,8 @@
     </div>
 
     <script>
-        function toggleSidebar() {
-            //$("#nav-sidebar").toggleClass('hidden');
-            $("#nav-sidebar").toggle();
+        function toggleDropdown() {
+            $("#dropdown-list").toggleClass('hidden');
         }
     </script>
 
