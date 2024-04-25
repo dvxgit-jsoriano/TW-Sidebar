@@ -20,7 +20,7 @@
     <div class="flex h-full" x-data="{ open: true }">
 
         <!-- Left column-->
-        <div id="nav-sidebar" class="flex-none w-56 bg-gray-200 sm:flex-shrink-0">
+        <div id="nav-sidebar" class="flex-none w-56 bg-gray-200 sm:flex-shrink-0" x-show="open">
             <!-- Sidebar navigation -->
             <div class="flex flex-col h-screen p-4 bg-gray-50">
                 <div class="inline-flex items-center mt-1">
@@ -45,7 +45,11 @@
                     </li>
                     <li><a href="#"
                             class="block py-2 text-gray-800 ps-4 pe-2 hover:bg-gray-200 hover:rounded-xl">Sidebar Modal
-                            Alpine JS</a>
+                            Alpine</a>
+                        <hr class="my-1">
+                    <li><a href="sidebar_drawer_jquery.html"
+                            class="block py-2 text-gray-800 ps-4 pe-2 hover:bg-gray-200 hover:rounded-xl">Sidebar Drawer
+                            JQuery</a>
                     </li>
                 </ul>
             </div>

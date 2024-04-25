@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- JQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body class="bg-gray-50">
+
+    <div class="relative">
+
+        <!-- Left column-->
+        <div id="nav-sidebar" class="flex-none w-56 bg-gray-200 sm:flex-shrink-0">
+
+            <!-- Drawer sidebar navigation -->
+            <div id="drawer-sidebar" class="relative w-full">
+                <!-- The overlay transparent -->
+                <div class="fixed top-0 left-0 w-full h-screen bg-gray-600 opacity-30" onclick="hideSidebar();">
+                    &nbsp;
+                </div>
+                <!-- The sidebar menu -->
+                <div class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto shadow-md bg-gray-50">
+                    <div class="inline-flex items-center mt-1">
+                        <img class="h-8 cursor-pointer"
+                            src="https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png">
+                        <h1 class="text-xl font-bold ms-2">Main Menu</h1>
+                    </div>
+                    <ul class="flex-1 mt-4 overflow-y-auto">
+                        <li><a href="index.html"
+                                class="block py-2 text-gray-800 ps-4 pe-2 hover:bg-gray-200 hover:rounded-xl">Home</a>
+                        </li>
+                        <li><a href="sidebar_jquery.html"
+                                class="block py-2 text-gray-800 ps-4 pe-2 hover:bg-gray-200 hover:rounded-xl">Sidebar
+                                JQuery</a></li>
+                        <li><a href="sidebar_alpine.html"
+                                class="block py-2 text-gray-800 ps-4 pe-2 hover:bg-gray-200 hover:rounded-xl">Sidebar
+                                Alpine
+                                JS</a>
+                        </li>
+                        <hr class="my-1">
+                        <li><a href="sidebar_modal_jquery.html"
+                                class="block py-2 text-gray-800 ps-4 pe-2 hover:bg-gray-200 hover:rounded-xl">Sidebar
+                                Modal
+                                JQuery</a>
+                        </li>
+                        <li><a href="#"
+                                class="block py-2 text-gray-800 ps-4 pe-2 hover:bg-gray-200 hover:rounded-xl">Sidebar
+                                Modal
+                                Alpine</a>
+                            <hr class="my-1">
+                        <li><a href="sidebar_drawer_jquery.html"
+                                class="block py-2 text-gray-800 ps-4 pe-2 hover:bg-gray-200 hover:rounded-xl">Sidebar
+                                Drawer
+                                JQuery</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right column -->
+        <div class="flex-1 bg-gray-300">
+
+            <!-- Header navigation -->
+            <div class="flex justify-between p-4 bg-gray-200">
+                <!-- Sidebar toggle button -->
+                <div class="left-nav">
+                    <header class="text-gray-600 body-font">
+                        <button class="px-2 py-1 border rounded hover:bg-gray-100" type="button"
+                            onclick="showSidebar();">
+                            <i class="fa-solid fa-bars"></i></button>
+                    </header>
+                </div>
+
+                <!-- Profile button -->
+                <div class="right-nav">
+                    <button class="px-2 py-1 border rounded hover:bg-gray-100" type="button">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Contents view-->
+            <div class="p-4 mx-auto">
+                <div class="p-2 bg-gray-100 border rounded-md">
+                    <h1>This page consist of tailwindcss sidebar design using drawer. The sidebar drawer will appear if
+                        you click the
+                        <i class="fa-solid fa-bars"></i></button> button
+                    </h1>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function showSidebar() {
+            $("#drawer-sidebar").removeClass('hidden');
+        }
+
+        function hideSidebar() {
+            $("#drawer-sidebar").addClass('hidden');
+        }
+    </script>
+</body>
+
+</html>
